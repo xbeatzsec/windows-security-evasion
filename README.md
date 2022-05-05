@@ -19,7 +19,7 @@ As you can see it has been detected as a malware in 19 differents anti-virus, bu
 
 But our target (Windows Defewnder) detected it as a &quot;Trojan:Win64/Meterpreter.D&quot;, so we can play around with our payload and try to bypass, this is my mission during this research.
 
-So in msfvenom we could create a exe file to run in windows system, but also we can create a payload from that software to create a shellcode containing the malware that we want to run in the victim victim with windows defender running.
+So in msfvenom we could create a exe file to run in windows system, but also we can create a payload from that software to create a shellcode containing the malware that we want to run in the victim system with windows defender running.
 
 Shellcodes are pieces of machine code designed to run local or remote system shell (hence the name). They are mainly used during exploitation of software vulnerabilities - when an attacker is able to control program&#39;s execution flow he needs some universal payload to execute desired action (usually shell access). This applies to both local exploitation (e.g. for privilege escalation) and remote exploitation (for gaining RCE on a server).
 
