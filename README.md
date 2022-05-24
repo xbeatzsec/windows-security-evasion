@@ -35,7 +35,11 @@ And why we should use it?
 
 We will use it first to run our shellcode, so with that we will start with VirtualAllloc to create a executable piece of memory, then we CreateThread to execute the shellcode in memory, and finally WaitForSingleObject to not crash upon receiving a command.
 
-```static extern IntPtr CreateThread(IntPtr lpThreadAttributes, uint dwStacksize,IntPtr lpStartAddress, IntPtr lpParameter,uint dwCreationFlags, IntPtr lpThreadId);```
+```csharp
+static extern IntPtr CreateThread(IntPtr lpThreadAttributes, uint dwStacksize,IntPtr lpStartAddress, IntPtr lpParameter,uint dwCreationFlags, IntPtr lpThreadId);
+IntPtr hThread = CreateThread(IntPtr.Zero, 0, addr, IntPtr.Zero, 0, IntPtr.Zero);
+WaitForSingleObject(hThread, 0xFFFFFFFF);
+```
 
 ![](https://github.com/xbeatzsec/windows-security-evasion/blob/main/after_compile_1st.png)
 
