@@ -24,3 +24,21 @@ So in msfvenom we could create a exe file to run in windows system, but also we 
 Shellcodes are pieces of machine code designed to run local or remote system shell (hence the name). They are mainly used during exploitation of software vulnerabilities - when an attacker is able to control program&#39;s execution flow he needs some universal payload to execute desired action (usually shell access). This applies to both local exploitation (e.g. for privilege escalation) and remote exploitation (for gaining RCE on a server).
 
 But first let&#39;s use Win32 API that is built into Windows, and that is an application programmig interface written in C by Microsoft to allow access to Windows features.
+
+It is used for malware development so we will use it too.
+
+And why we should use it?
+
+- It is built into Windows so functionallity doesn&#39;t have to be re-written´
+- It doesn&#39;t get flagged by AV
+- It is fast and usually well documented
+
+Modificar aqui!
+
+We will use it first to run our shellcode, so with that we will start with VirtualAllloc to create a executable piece of memory, then we CreateThread to execute the shellcode in memory, and finally WaitForSingleObject to not crash upon receiving a command.
+
+Asseguir á imagem
+
+![](https://github.com/xbeatzsec/windows-security-evasion/blob/main/after_compile_1st.png)
+
+After we compiled the file we got this result on the image above, we could bypass some of antivirus on the list but our windows defender still detecting our malware, so let&#39;s play around with our shellcode to maybe bypass it, we can encrypt our shellcode, we can reverse our byte array (shellcode). We do it now because we know that our Win32API aren&#39;t getting flagged by signature checks.
