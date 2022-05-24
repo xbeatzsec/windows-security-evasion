@@ -33,11 +33,7 @@ And why we should use it?
 - It doesn&#39;t get flagged by AV
 - It is fast and usually well documented
 
-Modificar aqui!
-
 We will use it first to run our shellcode, so with that we will start with VirtualAllloc to create a executable piece of memory, then we CreateThread to execute the shellcode in memory, and finally WaitForSingleObject to not crash upon receiving a command.
-
-Asseguir á imagem
 
 ![](https://github.com/xbeatzsec/windows-security-evasion/blob/main/after_compile_1st.png)
 
